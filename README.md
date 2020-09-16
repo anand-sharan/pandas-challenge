@@ -8,11 +8,19 @@ Hi All,
     Repo for Pandas Homework
         https://github.com/anand-sharan/pandas-challenge
 
+    Please check the following link to view the Jupyter Notebook on the GitHub:
+
+    https://nbviewer.jupyter.org/github/anand-sharan/pandas-challenge/blob/master/PyCitySchools/PyCitySchools.ipynb
+
 2. Please find the steps of Pandas homework solution:
 
     PyBankPyCitySchools.ipynb in PyCitySchools folder
     --------------------------------
     Jupyter Notebook for analyzing the City Schools and Students data of a company.
+
+    Please check the following link to view the Jupyter Notebook on the GitHub:
+
+    https://nbviewer.jupyter.org/github/anand-sharan/pandas-challenge/blob/master/PyCitySchools/PyCitySchools.ipynb
     
     Resources folder
     ---------------------
@@ -20,9 +28,10 @@ Hi All,
     
     Provided with school data set students_complete.csv. The dataset is composed of columns: Student ID,student_name,gender,grade,school_name,reading_score,math_score.
 
-    The Python script analyzes the school and students records calculates each of the following:
+    The Jupyter notebook PyCitySchools.ipynb script analyzes the school and students records calculates each of the following:
 
-    District Summary
+3. District Summary
+   -------------------
     * Calculate the total number of schools
 
     * Calculate the total number of students
@@ -43,115 +52,62 @@ Hi All,
 
     * Optional: give the displayed data cleaner formatting
 
-    Steps to execute the script and validate the solution:
+4. Top Performing Schools (By % Overall Passing)
+---------------------------------------------------
+        * Sort and display the top five performing schools by % overall passing.
 
-    Step 1. Download the git hub repository to local folder on your computer
-    Step 2. Change your working directory to `~/python-challenge/PyBank`
-    Step 3. Ensure python is activated by running command `source activate PythonData`
-    Step 4. Execute command `python main.py` to check the solution
-    Step 5. Validate output displayed on screen for `Financial Analysis`
-    Step 6. Change your working directory to `~/python-challenge/PyBank/analysis`
-    Step 7. Open file output.csv in Excel or any text editor to view solutions output file
+    Steps to validate the solution: Check output on Out[26] to be validated with Out[10] output
 
+    Bottom Performing Schools (By % Overall Passing)
+        * Sort and display the five worst-performing schools by % overall passing.
 
-    PyPoll
-    -------
-    Python Script for analysis a set of poll data. Provided a set of poll data called election_data.csv. The dataset is composed of three columns: Voter ID, County, and Candidate.
+    Steps to validate the solution: Check output on Out[28] to be validated with Out[11] output
 
-    The Python script analyzes the votes and calculates each of the following:
+5. Math Scores by Grade
+---------------------------------------------------
 
-    * The total number of votes cast
+        * Create a table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
-    * A complete list of candidates who received votes
+        * Create a pandas series for each grade. Hint: use a conditional statement.
 
-    * The percentage of votes each candidate won
+        * Group each series by school
 
-    * The total number of votes each candidate won
+        * Combine the series into a dataframe
 
-    * The winner of the election based on popular vote.
+        * Optional: give the displayed data cleaner formatting        
 
-        Steps to execute the script and validate the solution:
+    Steps to validate the solution: Check output on Out[34] to be validated with Out[12] output
 
-        Step 1. Download the git hub repository to local folder on your computer
-        Step 2. Change your working directory to `~/python-challenge/PyPoll`
-        Step 3. Ensure python is activated by running command `source activate PythonData`
-        Step 4. Execute command `python main.py` to check the solution
-        Step 5. Validate output displayed on screen for `Election Results`
-        Step 6. Change your working directory to `~/python-challenge/PyPoll/analysis`
-        Step 7. Open file output.csv in Excel or any text editor to view solutions output file
+6. Reading Score by Grade
+---------------------------------
+        * Perform the same operations as above for reading scores
 
-    PyParagraph
-    -------
-    Python script to automate the analysis of passage using  metrics. Script will need to do the following:
+    Steps to validate the solution: Check output on Out[40] to be validated with Out[13] output
 
-        * Import a text file filled with a paragraph of your choosing.
+7. Scores by School Spending
+----------------------------------
+    * Create a table that breaks down school performances based on average Spending Ranges (Per Student)* Use 4 reasonable bins to group school spending. Include in the table each of the following:
+    * Average Math Score
+    * Average Reading Score
+    * % Passing Math
+    * % Passing Reading
+    * Overall Passing Rate (Average of the above two)
 
-        * Assess the passage for each of the following:
+   Steps to validate the solution: Check output on Out[46] to be validated with Out[18] output
 
-        * Approximate word count
+8. Scores by School Size
+-----------------------------
+    * Perform the same operations as above, based on school size.
 
-        * Approximate sentence count
+   Steps to validate the solution: Check output on Out[51] to be validated with Out[22] output
 
-        * Approximate letter count (per word)
+9. Scores by School Type
+----------------------------
+    * Perform the same operations as above, based on school type
 
-        * Average sentence length (in words)
+   Steps to validate the solution: Check output on Out[54] to be validated with Out[24] output
 
-        Steps to execute the script and validate the solution:
-
-        Step 1. Download the git hub repository to local folder on your computer
-        Step 2. Change your working directory to `~/python-challenge/PyParagraph`
-        Step 3. Ensure python is activated by running command `source activate PythonData`
-        Step 4. Execute command `python main.py` to check the solution
-        Step 6. Change your working directory to `~/python-challenge/PyPoll/output`
-        Step 7. Open file output_1.csv in Excel or any text editor to view solutions output file
-        Step 8. Change your working directory to `~/python-challenge/PyParagraph`
-        Step 9. Change paragraph_1.txt to paragraph_2.txt on line 16
-        Step 10. Execute command `python main.py` to check the solution
-        Step 11. Change your working directory to `~/python-challenge/PyPoll/output`
-        Step 12. Open file output_2.csv in Excel or any text editor to view solutions output file
-
-    PyBoss
-    ------
-        Python script able to convert your employee records to the required format. Script will need to do the following:
-
-        * Import the `employee_data.csv` file, which currently holds employee records like the below:
-
-        ```csv
-        Emp ID,Name,DOB,SSN,State
-        214,Sarah Simpson,1985-12-04,282-01-8166,Florida
-        15,Samantha Lara,1993-09-08,848-80-7526,Colorado
-        411,Stacy Charles,1957-12-20,658-75-8526,Pennsylvania
-        ```
-
-        * Then convert and export the data to use the following format instead:
-
-        ```csv
-        Emp ID,First Name,Last Name,DOB,SSN,State
-        214,Sarah,Simpson,12/04/1985,***-**-8166,FL
-        15,Samantha,Lara,09/08/1993,***-**-7526,CO
-        411,Stacy,Charles,12/20/1957,***-**-8526,PA
-        ```
-
-        * In summary, the required conversions are as follows:
-
-        * The `Name` column should be split into separate `First Name` and `Last Name` columns.
-
-        * The `DOB` data should be re-written into `MM/DD/YYYY` format.
-
-        * The `SSN` data should be re-written such that the first five numbers are hidden from view.
-
-        * The `State` data should be re-written as simple two-letter abbreviations.
-
-        Steps to execute the script and validate the solution:
-
-        Step 1. Download the git hub repository to local folder on your computer
-        Step 2. Change your working directory to `~/python-challenge/PyBoss`
-        Step 3. Ensure python is activated by running command `source activate PythonData`
-        Step 4. Execute command `python main.py` to check the solution
-        Step 6. Change your working directory to `~/python-challenge/PyBoss/output`
-        Step 7. Open file output.csv in Excel or any text editor to view solutions output file
-
-3. Request for you gracious feedback.
+10. Request for you gracious feedback.
 
 Thanks & Regards,
 Anand Sharan
